@@ -23,6 +23,10 @@ class Welcome extends CI_Controller {
 		echo "</pre>";
 		$this->load->view('welcome_message');
 	}
+	
+	public function helloWorld() {
+		echo "Hola como estas";
+	}
 }
 
 /* End of file welcome.php */
