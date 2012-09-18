@@ -29,8 +29,8 @@ class Welcome extends CI_Controller {
 	}
 	
 	public function echoPostParams() {
-		if(count($this->post()) > 0) {
-			echo "Los parámetros ingresados fueron: " . var_dump($this->post());
+		if(count($this->input->post()) > 0) {
+			echo "Los parámetros ingresados fueron: " . var_dump($this->input->post());
 		}
 		else {
 			echo "Ningun parámetro ha sido ingresado.";
