@@ -24,7 +24,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	
-	public function helloWorld() {
+	public function hello() {
 		echo "Hola como estas";
 	}
 }
