@@ -27,6 +27,16 @@ class Welcome extends CI_Controller {
 	public function hello() {
 		echo "Hola como estas";
 	}
+	
+	public function echoPostParams() {
+		if(count($this->post()) > 0) {
+			echo "Los parámetros ingresados fueron: " . var_dump($this->post());
+		}
+		else {
+			echo "Ningun parámetro ha sido ingresado.";
+		}
+	}
+	
 }
 
 /* End of file welcome.php */
