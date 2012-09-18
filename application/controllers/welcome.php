@@ -30,10 +30,10 @@ class Welcome extends CI_Controller {
 	
 	public function echoPostParams() {
 		if($this->input->post()) {
-			echo "Los parámetros ingresados fueron: " . var_dump($this->input->post());
+			var_dump($this->input->post());
 		}
 		else {
-			echo "Ningun parámetro ha sido ingresado.";
+			echo "Ningun parametro ha sido ingresado.";
 		}
 	}
 	
