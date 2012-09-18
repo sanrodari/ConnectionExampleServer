@@ -19,7 +19,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()	{
 		echo "<pre>";
-		var_dump("Hola gente como estas");
+		var_dump("Hola gente como estas, bien?");
 		echo "</pre>";
 		$this->load->view('welcome_message');
 	}
