@@ -13,7 +13,7 @@ class Hotels extends CI_Controller {
 		$this->load->model('Hotel');
 		
 		$name  = $this->input->post('name');
-		$value = $this->input->post('value');
+		$value = $this->input->post('valueReservation');
 		
 		$success = $this->Hotel->insertHotel($name, $value);
 		
