@@ -21,7 +21,7 @@ class Hotels extends CI_Controller {
 			echo json_encode(array("success" => true));
 		}
 		else {
-			echo json_encode(array("success" => false, "message" => "Error inesperado en la DB."));
+			echo json_encode(array("success" => false, "message" => "Error inesperado en la DB"));
 		}
 	}
 	
