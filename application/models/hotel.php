@@ -17,7 +17,7 @@ class Hotel extends CI_Model {
 	
 	public function insertHotel($name, $value) {
 		$insert_values['name']   = $name;
-        $insert_values['value']  = $value;
+        $insert_values['value_reservation']  = $value;
 
         return $this->db->insert('hotels', $insert_values);
 	}
