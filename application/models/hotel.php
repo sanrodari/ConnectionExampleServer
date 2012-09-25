@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Para interactuar con la información de la tabla hotels.
+ * Para interactuar con la tabla hotels.
  */
 class Hotel extends CI_Model {
 	
