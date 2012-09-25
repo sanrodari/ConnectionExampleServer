@@ -9,20 +9,20 @@ class Hotels extends CI_Controller {
 		echo json_encode($hotels);
 	}
 	
-	public function hello() {
-		echo "Hola como estas";
-	}
-	
-	public function echoPostParams() {
-		if($this->input->post()) {
-			var_dump($this->input->post());
+	public function insertHotel() {
+		$this->load->model('Hotel');
+		
+		$name  = $this->input->post('name');
+		$value = $this->input->post('value');
+		
+		$success = $this->Hotel->insertHotel($name, $value);
+		
+		if($success) {
+			echo json_encode(array("success" => true));
 		}
 		else {
-			echo "Ningun parametro ha sido ingresado.";
+			echo json_encode(array("success" => false, "message" => "Error inesperado en la DB."));
 		}
 	}
 	
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
