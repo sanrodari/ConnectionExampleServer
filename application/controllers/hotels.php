@@ -15,14 +15,21 @@ class Hotels extends CI_Controller {
 		$name  = $this->input->post('name');
 		$value = $this->input->post('valueReservation');
 		
-		$success = $this->Hotel->insertHotel($name, $value);
-		
-		if($success) {
-			echo json_encode(array("success" => true));
+		// Se verifica que el nombre haya sido ingresado.
+		if($name) {
+			$success = $this->Hotel->insertHotel($name, $value);
+			
+			if($success) {
+				echo json_encode(array("success" => true));
+			}
+			else {
+				echo json_encode(array("success" => false, "message" => "Error inesperado en la DB"));
+			}
 		}
 		else {
-			echo json_encode(array("success" => false, "message" => "Error inesperado en la DB"));
+			echo json_encode(array("success" => false, "message" => "El nombre es requerido"));
 		}
+		
 	}
 	
 }
